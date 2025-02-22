@@ -11,7 +11,8 @@ h1 {
     font-family: "Syne Mono", serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 32px;
+    font-size: 38px;
+    text-align: center;
 }
 h2 {
     color: rgb(4, 217, 181);
@@ -19,12 +20,36 @@ h2 {
     font-weight: 400;
     font-style: normal;
     font-size: 24px;
+    clear: both; /* Evita que el float afecte su posición */
 }
 
+ul{
+    padding: 0px;
+}
 h3 {
     color: rgb(250, 235, 215);
     font-style: oblique;
 }
+
+a:any-link{ /* Se tiene que hacer lo mismo tres veces any-link, moz-any-link y webkit-any-lin para que sea compatible con todos los navegadores*/
+    color: rgb(110, 130, 142);
+    text-decoration: none;
+}
+
+a:-moz-any-link{
+    color: rgb(110, 130, 142);
+    text-decoration: none;
+}
+
+a:-webkit-any-link{
+    color: rgb(110, 130, 142);
+    text-decoration: none;
+}
+
+li:hover{
+    text-decoration: underline;
+}
+
 
 .codigo {
     color: rgb(213, 95, 95);
@@ -37,17 +62,41 @@ h3 {
 .hastag {
     color: rgb(143, 187, 189);
     font-style: oblique;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode';
-    font-size: 16px;
+    font-size: 18px;
     font-weight: lighter;
+    text-align: center;
+    float: left;
 
 }
 
+.hastags-container {
+    display: flex;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    gap: 15px; /* Espacio entre los hashtags */
+    flex-wrap: wrap; /* Permite que se acomoden en varias líneas si es necesario */
+}
 
+
+#cita{
+    text-align: center;
+}
+
+#listaRedesSociales{
+    list-style: none;
+}
+
+#listaRedesSociales li>a {
+    display: flex;
+    align-items: center; /* Alinea la imagen y el texto verticalmente */
+    gap: 10px; /* Espacio entre la imagen y el texto */
+    margin-bottom: 10px; /* Espacio entre elementos de la lista */
+}
 
 #sobremi {
     border-bottom: 1px solid rgb(143, 187, 189);
 }
+
+
 
 /* CSS prima la especididad, si una regla es más especifica que otra, es la que se utiliza. Por ejemplo, 
 /* definimos el estilo para h3 y para .hastag, un elemento h3 con class hastag, tendrá las propiedades de .hastag
