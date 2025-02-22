@@ -1,8 +1,53 @@
-body{
+body {
     background-color: #1d2127;
-    color: #ffff;
+    color: rgb(110, 130, 142);
     font-family: "Overpass Mono", monospace;
-    padding: 0;
-    margin:0;
+    padding: 10px;
+    margin: 20px;
+    ;
+}
+h1 {
+    color: rgb(4, 217, 181);
+    font-family: "Syne Mono", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 32px;
+}
+h2 {
+    color: rgb(4, 217, 181);
+    font-family: "Syne Mono", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
 }
 
+h3 {
+    color: rgb(250, 235, 215);
+    font-style: oblique;
+}
+
+.codigo {
+    color: rgb(213, 95, 95);
+    font-family: "Inspiration", serif;
+    font-size: 24px;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.hastag {
+    color: rgb(143, 187, 189);
+    font-style: oblique;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode';
+    font-size: 16px;
+    font-weight: lighter;
+
+}
+
+
+
+#sobremi {
+    border-bottom: 1px solid rgb(143, 187, 189);
+}
+
+/* CSS prima la especididad, si una regla es más especifica que otra, es la que se utiliza. Por ejemplo, 
+/* definimos el estilo para h3 y para .hastag, un elemento h3 con class hastag, tendrá las propiedades de .hastag
