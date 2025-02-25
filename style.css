@@ -32,7 +32,7 @@ nav{
 main{
     margin-left: 220px; /* Evita que el contenido se solape con el nav */
     margin-top: 100px; /* Para que no se solape con el header */
-    padding: 15vh;
+    padding: 10px;
 }
 
 main section{
@@ -86,6 +86,11 @@ nav ul li{
     padding: 10% 0% 16% 0%;
 }
 
+form{
+    padding-top: 75px;
+}
+
+
 
 a:any-link{ /* Se tiene que hacer lo mismo tres veces any-link, moz-any-link y webkit-any-lin para que sea compatible con todos los navegadores*/
     color: rgb(110, 130, 142);
@@ -132,6 +137,24 @@ li:hover{
     flex-wrap: wrap; /* Permite que se acomoden en varias líneas si es necesario */
 }
 
+.itemform{
+    display: grid;
+    grid-template-columns: 150px 350px;
+    padding: 6px;
+    justify-content: center;
+}
+
+.itemform input, .itemform textarea{
+    border-radius: 5px;
+    border: none;
+}
+
+input[type="submit"] {
+    background-color:rgb(110, 130, 142);
+    font-family: "Overpass Mono", monospace;
+    grid-column: 2/3;
+    justify-self: right;
+}
 
 #cita{
     text-align: center;
