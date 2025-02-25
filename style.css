@@ -3,22 +3,51 @@ body {
     color: rgb(110, 130, 142);
     font-family: "Overpass Mono", monospace;
     padding: 10px;
-    margin: 20px;
-    
+    display: block;
 }
+header{
+    position: fixed; /* Se mantiene fijo en la pantalla */
+    width: 100%;
+    height: 18%;
+    top: 0; /* Pegado arriba */
+    left: 0;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    background-color:#1d2127 ;
 
+}
 nav{
-    background-color: bisque;
-    width: 25%; /* Ocupa el 25% del ancho */
-    height: 100vh; /* Ocupa toda la altura de la pantalla */
-    padding: 20px;
+    width: 200px; /* Ancho fijo */
+    height: 50vh; /* Mitad de la altura de la pantalla */
+    position: fixed; /* Se mantiene fijo en la pantalla */
+    left: 0; /* Pegado al borde izquierdo */
+    top: 50%; /* Lo coloca en la mitad de la pantalla */
+    transform: translateY(-50%); /* Lo ajusta para que esté centrado */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenido horizontalmente */
+    justify-content: center; /* Centra el contenido verticalmente */
+    padding: 20px 20px 20px 0px;
 }
 
 main{
-    background-color: rgb(90, 93, 92);
-    padding: 20px;
+    margin-left: 220px; /* Evita que el contenido se solape con el nav */
+    margin-top: 100px; /* Para que no se solape con el header */
+    padding: 15vh;
 }
 
+main section{
+    min-height: 100vh; /* Cada sección ocupa como mínimo toda la altura visible */
+    display: flex; /* Para centrar contenido */
+    flex-direction: column;
+    justify-content: flex-start; /* Alinea el contenido arriba */
+    align-items: flex-start; /* Centra horizontalmente */
+    scroll-margin-top: 18vh; /* Ajusta el scroll para que no se esconda el título debajo del header */
+
+}
+
+footer{
+    grid-area: footer;
+}
 
 h1 {
     color: rgb(4, 217, 181);
@@ -27,6 +56,10 @@ h1 {
     font-style: normal;
     font-size: 38px;
     text-align: center;
+
+    padding-top: 25px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 h2 {
     color: rgb(4, 217, 181);
@@ -34,6 +67,7 @@ h2 {
     font-weight: 400;
     font-style: normal;
     font-size: 24px;
+    padding-top: 5px;
     clear: both; /* Evita que el float afecte su posición */
 }
 
@@ -47,6 +81,9 @@ ul{
     padding: 0px;
     list-style: none;
 
+}
+nav ul li{
+    padding: 10% 0% 16% 0%;
 }
 
 
@@ -82,17 +119,16 @@ li:hover{
 .hastag {
     color: rgb(143, 187, 189);
     font-style: oblique;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: lighter;
     text-align: center;
-    float: left;
 
 }
 
 .hastags-container {
     display: flex;
     justify-content: center; /* Centra los elementos horizontalmente */
-    gap: 15px; /* Espacio entre los hashtags */
+    gap: 25px; /* Espacio entre los hashtags */
     flex-wrap: wrap; /* Permite que se acomoden en varias líneas si es necesario */
 }
 
@@ -108,11 +144,10 @@ li:hover{
     align-items: center; /* Alinea la imagen y el texto verticalmente */
     gap: 10px; /* Espacio entre la imagen y el texto */
     margin-bottom: 10px; /* Espacio entre elementos de la lista */
+    padding-bottom: 20px;
 }
 
-#nombrecabezera {
-    border-bottom: 1px solid rgb(143, 187, 189);
-}
+
 
 
 
