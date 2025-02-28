@@ -3,7 +3,15 @@ body {
     color: rgb(110, 130, 142);
     font-family: "Overpass Mono", monospace;
     padding: 10px;
-    display: block;
+    display: grid;
+    grid-template-columns: 20% 80%; /* Nav ocupa el 20%, Main el 80% */
+    grid-template-rows: auto 1fr auto; /* Header y Footer tamaño automático, Main ocupa el espacio restante */
+    grid-template-areas:
+        "header header"
+        "nav main"
+        "footer footer";
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    margin: 0;
 }
 header{
     position: fixed; /* Se mantiene fijo en la pantalla */
@@ -13,11 +21,13 @@ header{
     left: 0;
     z-index: 1000; /* Asegura que esté por encima de otros elementos */
     background-color:#1d2127 ;
+    grid-area: header;
 
 }
 nav{
-    width: 200px; /* Ancho fijo */
-    height: 50vh; /* Mitad de la altura de la pantalla */
+    grid-area: nav;
+    width: 20%; /* Ocupa el 20% definido en la grid */
+    height: 100%; /* Ocupa toda la altura disponible */
     position: fixed; /* Se mantiene fijo en la pantalla */
     left: 0; /* Pegado al borde izquierdo */
     top: 50%; /* Lo coloca en la mitad de la pantalla */
@@ -30,7 +40,10 @@ nav{
 }
 
 main{
-    margin-left: 220px; /* Evita que el contenido se solape con el nav */
+    grid-area: main;
+    width: 80%; /* Ocupa el 80% definido en la grid */
+    padding: 10px;
+    margin-left: 10px; /* Evita que el contenido se solape con el nav */
     margin-top: 100px; /* Para que no se solape con el header */
     padding: 10px;
 }
